@@ -2,12 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { saveReport } from '@/lib/supabase/reports';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://id-preview-e39e7c1e-483c-46db-bcbf-ec6c545adfba.lovable.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://id-preview--e30e7c1e-483c-4c6b-bcbf-ee65d458fab1.lovable.app');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, Origin');
 
   if (req.method === 'OPTIONS') {
-    res.status(200).end();  // Preflight request success
+    res.status(200).end(); // Preflight request success
     return;
   }
 
